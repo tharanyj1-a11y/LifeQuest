@@ -1,1 +1,1 @@
-# lifequest: CSSD 1202 – LifeQuest Project
+# LifeQuest: CSSD 1202 – LifeQuest Project

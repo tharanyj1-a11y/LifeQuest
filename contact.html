@@ -1,58 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>LifeQuest | Contact</title>
+<meta charset="UTF-8">
+<title>LifeQuest | Contact</title>
 </head>
 
 <body>
 
-<header>
-  <h1>LifeQuest</h1>
-  <p>Contact Us</p>
+<header id="site-header">
+<h1 class="site-title">LifeQuest</h1>
 </header>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="money.html">Money</a></li>
-    <li><a href="habits.html">Habits</a></li>
-    <li><a href="productivity.html">Productivity</a></li>
-    <li><a href="achievements.html">Achievements</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<nav id="main-navigation">
+<ul class="nav-menu">
+
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+</ul>
 </nav>
 
-<main>
+<main id="contact-main">
 
-  <section>
-    <h2>Get in Touch</h2>
+<section id="contact-section" class="content-section">
 
-    <form>
-      <label>Name:</label><br>
-      <input type="text"><br><br>
+<h2 class="section-title">Contact Us</h2>
 
-      <label>Email:</label><br>
-      <input type="email"><br><br>
+<form id="contact-form" class="form-container">
 
-      <label>User Type:</label><br>
-      <input type="radio" name="user"> Student
-      <input type="radio" name="user"> Professional<br><br>
+<div class="form-group">
 
-      <label>Message:</label><br>
-      <textarea></textarea><br><br>
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" required>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+</div>
+
+<div class="form-group">
+
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" required>
+
+</div>
+
+<div class="form-group">
+
+<p class="form-label">User Type:</p>
+
+<input type="radio" id="student" name="user-type" value="student">
+<label for="student">Student</label>
+
+<input type="radio" id="professional" name="user-type" value="professional">
+<label for="professional">Professional</label>
+
+</div>
+
+<div class="form-group">
+
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="5"></textarea>
+
+</div>
+
+<div class="form-group">
+
+<button type="submit" class="submit-button">Submit</button>
+
+</div>
+
+</form>
+
+</section>
 
 </main>
 
-<footer>
-  <p>&copy; 2026 LifeQuest – CSSD 1202</p>
+<footer id="site-footer">
+<p class="footer-text">© 2026 LifeQuest</p>
 </footer>
 
 </body>

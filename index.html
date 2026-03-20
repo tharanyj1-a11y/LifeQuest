@@ -2,75 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>LifeQuest</title>
-<link rel="stylesheet" href="css/styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LifeQuest</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="home-page">
 
-<header class="header">
-<h1>LifeQuest</h1>
-<p class="tagline">Gamify Your Real Life</p>
+<header class="main-header">
+<h1 id="app-title">LifeQuest</h1>
+<p class="tagline">Level up your life skills 🚀</p>
 </header>
 
-<nav class="nav">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="dashboard.html">Dashboard</a></li>
-<li><a href="account.html">Account</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+<nav class="main-nav">
+<a class="nav-link" href="dashboard.html">Dashboard</a>
+<a class="nav-link" href="about.html">About</a>
+<a class="nav-link" href="contact.html">Contact</a>
 </nav>
 
-<main>
+<section class="container">
+<h2>Welcome</h2>
+<p>Improve your life through gamified learning.</p>
 
-<section class="hero">
-<h2>Welcome Adventurer 🎮</h2>
-<p>Build habits, manage money, boost productivity and unlock achievements.</p>
-<a href="dashboard.html" class="btn">Start Journey</a>
-</section>
-
-<section class="modules">
-
-<h2>Your Modules</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>💰 Money Manager</h3>
-<p>Track income, expenses and savings goals.</p>
-<a href="money.html">Open</a>
-</div>
-
-<div class="card">
-<h3>💪 Healthy Habits</h3>
-<p>Log meals, sleep and workouts.</p>
-<a href="habits.html">Open</a>
-</div>
-
-<div class="card">
-<h3>⚡ Productivity Arena</h3>
-<p>Complete tasks and focus sessions.</p>
-<a href="productivity.html">Open</a>
-</div>
-
-<div class="card">
-<h3>🏆 Achievements</h3>
-<p>Unlock badges and streak rewards.</p>
-<a href="achievements.html">Open</a>
-</div>
-
-</div>
+<form id="start-form">
+<label for="username">Enter your name:</label>
+<input type="text" id="username" name="username">
+<button type="submit">Start</button>
+</form>
 
 </section>
-
-</main>
-
-<footer class="footer">
-<p>© 2026 LifeQuest</p>
-</footer>
 
 </body>
 </html>

@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<title>LifeQuest | Habits</title>
-<link rel="stylesheet" href="css/styles.css">
+<title>Habits</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="habits-page">
 
-<header id="site-header">
-<h1 class="site-title">Healthy Habits</h1>
+<header class="main-header">
+<h1>Healthy Habits</h1>
 </header>
 
-<nav id="main-navigation">
-<ul class="nav-menu">
-
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
-</ul>
+<nav class="main-nav">
+<a href="dashboard.html">Dashboard</a>
 </nav>
 
-<main id="habits-main">
+<section class="container">
 
-<section id="habits-section" class="content-section">
+<form id="habits-form">
 
-<h2 class="section-title">Habit Tracker</h2>
+<label for="water">Water Intake (cups):</label>
+<input type="number" id="water" name="water">
 
-<ul class="habit-list">
-<li class="habit-item">Exercise</li>
-<li class="habit-item">Meditation</li>
-<li class="habit-item">Healthy Eating</li>
-</ul>
+<label for="sleep">Sleep (hours):</label>
+<input type="number" id="sleep" name="sleep">
+
+<button type="submit">Log Habits</button>
+
+</form>
 
 </section>
-
-</main>
-
-<footer id="site-footer">
-<p class="footer-text">© 2026 LifeQuest</p>
-</footer>
 
 </body>
 </html>

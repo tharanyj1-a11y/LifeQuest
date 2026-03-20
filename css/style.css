@@ -177,3 +177,30 @@ form:hover {
     transform: scale(1.03);
   }
 }
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+}
+
+.password-wrapper button {
+  width: auto;
+  margin-left: 5px;
+  padding: 0.5rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.success {
+  color: green;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

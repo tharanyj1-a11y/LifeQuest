@@ -1,89 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<title>LifeQuest | Your Account</title>
-<link rel="stylesheet" href="css/styles.css">
+<title>Account</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="account-page">
 
-<header id="site-header">
-<h1 class="site-title">LifeQuest</h1>
-<p class="tagline">Level Up Your Real Life</p>
+<header class="main-header">
+<h1>Account</h1>
 </header>
 
-<nav id="main-navigation">
-<ul class="nav-menu">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-<li class="nav-item"><a class="nav-link" href="account.html">Your Account</a></li>
-<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
+<nav class="main-nav">
+<a href="dashboard.html">Dashboard</a>
 </nav>
 
-<main>
+<section class="container">
 
-<section class="content-section hero-section">
-<h2 class="section-title">👤 Your Account</h2>
-<p>Customize your avatar and track your progress in LifeQuest</p>
-</section>
+<form id="account-form">
 
-<div class="account-grid">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
 
-<!-- Avatar Card -->
-<div class="account-card avatar-card">
+<label for="avatar">Choose Avatar:</label>
+<select id="avatar" name="avatar">
+<option value="default">Default</option>
+<option value="warrior">Warrior</option>
+<option value="scholar">Scholar</option>
+</select>
 
-<h3>🧑 Your Avatar</h3>
+<button type="submit">Save</button>
 
-<img src="images/default-avatar.png" alt="User Avatar" class="avatar-img">
-
-<form class="avatar-form">
-<label for="avatarUpload">Upload New Avatar</label>
-<input type="file" id="avatarUpload" class="form-input">
-<button class="primary-btn">Save Avatar</button>
 </form>
 
-</div>
-
-<!-- Stats Card -->
-<div class="account-card stats-card">
-
-<h3>📊 Your Stats</h3>
-
-<p><strong>Aura Level:</strong> 8</p>
-
-<div class="progress-bar">
-<div class="progress-fill" style="width:65%"></div>
-</div>
-
-<p>Next Level Progress</p>
-
-</div>
-
-<!-- Achievements Card -->
-<div class="account-card achievements-card">
-
-<h3>🏆 Recent Achievements</h3>
-
-<ul class="achievement-list">
-<li>✨ Completed 5 Productivity Sessions</li>
-<li>💧 Logged Water Intake 3 Days Streak</li>
-<li>💰 Saved $200 Budget Goal</li>
-<li>🥗 Healthy Meals Logged</li>
-</ul>
-
-</div>
-
-</div>
-
-</main>
-
-<footer id="site-footer">
-<p class="footer-text">© 2026 LifeQuest</p>
-</footer>
+</section>
 
 </body>
 </html>

@@ -6,19 +6,30 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<header><h1>Money Manager</h1></header>
+<body id="money-page">
 
-<nav>
+<header class="main-header">
+<h1>Money Manager</h1>
+</header>
+
+<nav class="main-nav">
 <a href="dashboard.html">Dashboard</a>
 </nav>
 
-<section>
-<h2>Budget</h2>
-<input placeholder="Income">
-<input placeholder="Expenses">
-<button>Calculate</button>
-<p>Remaining: $0</p>
+<section class="container">
+
+<form id="money-form">
+
+<label for="income">Monthly Income:</label>
+<input type="number" id="income" name="income">
+
+<label for="expenses">Monthly Expenses:</label>
+<input type="number" id="expenses" name="expenses">
+
+<button type="submit">Calculate</button>
+
+</form>
+
 </section>
 
 </body>

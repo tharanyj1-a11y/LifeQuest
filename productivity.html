@@ -6,22 +6,36 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<header><h1>Productivity Arena</h1></header>
+<body id="productivity-page">
 
-<nav>
+<header class="main-header">
+<h1>Productivity Arena</h1>
+</header>
+
+<nav class="main-nav">
 <a href="dashboard.html">Dashboard</a>
 </nav>
 
-<section>
-<h2>Goals</h2>
-<input placeholder="New goal">
-<button>Add</button>
-<ul></ul>
+<section class="container">
 
-<h3>Pomodoro Timer</h3>
-<p>25:00</p>
-<button>Start</button>
+<form id="goal-form">
+
+<label for="goal">New Goal:</label>
+<input type="text" id="goal" name="goal">
+
+<button type="submit">Add Goal</button>
+
+</form>
+
+<form id="timer-form">
+
+<label for="timer">Pomodoro Timer (minutes):</label>
+<input type="number" id="timer" name="timer" value="25">
+
+<button type="submit">Start</button>
+
+</form>
+
 </section>
 
 </body>

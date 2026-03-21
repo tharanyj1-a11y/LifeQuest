@@ -1,55 +1,30 @@
-const form = document.getElementById("login-form");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const errorMsg = document.getElementById("error-message");
-const successMsg = document.getElementById("success-message");
-const togglePassword = document.getElementById("togglePassword");
+const form = document.getElementById("contact-form");
+const messageBox = document.getElementById("form-message");
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  errorMsg.textContent = "";
-  successMsg.textContent = "";
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-
-  const savedEmail = localStorage.getItem("userEmail");
-  const savedPassword = localStorage.getItem("userPassword");
-
-  if (!validateEmail(emailValue)) {
-    errorMsg.textContent = "Enter a valid email.";
+  if (name === "" || email === "" || message === "") {
+    messageBox.textContent = "Please fill in all fields.";
+    messageBox.style.color = "red";
     return;
   }
 
-  if (passwordValue.length < 6) {
-    errorMsg.textContent = "Password must be at least 6 characters.";
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailPattern.test(email)) {
+    messageBox.textContent = "Enter a valid email address.";
+    messageBox.style.color = "red";
     return;
   }
 
-  if (emailValue === savedEmail && passwordValue === savedPassword) {
-    successMsg.textContent = "Login successful! Redirecting...";
-    
-    setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 1500);
+  messageBox.textContent = "Opening your email app...";
+  messageBox.style.color = "lightgreen";
 
-  } else {
-    errorMsg.textContent = "Incorrect email or password.";
-  }
-});
+  const mailtoLink = `mailto:your@email.com?subject=LifeQuest Feedback from ${name}&body=${message}`;
 
-function validateEmail(email) {
-  const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  return pattern.test(email);
-}
-
-togglePassword.addEventListener("click", function() {
-  if (password.type === "password") {
-    password.type = "text";
-    togglePassword.textContent = "🙈";
-  } else {
-    password.type = "password";
-    togglePassword.textContent = "👁️";
-  }
+  window.location.href = mailtoLink;
 });

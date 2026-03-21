@@ -14,8 +14,11 @@ form.addEventListener("submit", function(e) {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
+  const savedEmail = localStorage.getItem("userEmail");
+  const savedPassword = localStorage.getItem("userPassword");
+
   if (!validateEmail(emailValue)) {
-    errorMsg.textContent = "Please enter a valid email.";
+    errorMsg.textContent = "Enter a valid email.";
     return;
   }
 
@@ -24,11 +27,16 @@ form.addEventListener("submit", function(e) {
     return;
   }
 
-  successMsg.textContent = "Login successful! Redirecting...";
+  if (emailValue === savedEmail && passwordValue === savedPassword) {
+    successMsg.textContent = "Login successful! Redirecting...";
+    
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1500);
 
-  setTimeout(() => {
-    window.location.href = "dashboard.html";
-  }, 1500);
+  } else {
+    errorMsg.textContent = "Incorrect email or password.";
+  }
 });
 
 function validateEmail(email) {

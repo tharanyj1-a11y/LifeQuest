@@ -24,7 +24,11 @@ form.addEventListener("submit", function(e) {
     return;
   }
 
-  successMsg.textContent = "Login successful!";
+  successMsg.textContent = "Login successful! Redirecting...";
+
+  setTimeout(() => {
+    window.location.href = "dashboard.html";
+  }, 1500);
 });
 
 function validateEmail(email) {

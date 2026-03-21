@@ -83,3 +83,17 @@ button {
     margin-left: 0;
   }
 }
+
+.contact-card {
+  max-width: 500px;
+  margin: auto;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}

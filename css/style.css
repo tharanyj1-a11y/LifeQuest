@@ -1,226 +1,85 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f4f6f9;
-  color: #333;
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  color: #fff;
 }
 
-h1, h2, h3 {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-.tagline {
-  font-size: 1.1rem;
-  color: #e0f7e9;
-}
-
-.main-header {
-  background: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.main-nav {
+.landing {
   display: flex;
-  flex-direction: column;
-  background: #333;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.main-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 1rem;
+.hero {
   text-align: center;
-  transition: background 0.3s ease;
-}
-
-.main-nav a:hover {
-  background: #555;
-}
-
-.container {
-  padding: 1rem;
-  max-width: 1100px;
-  margin: auto;
-}
-
-section {
-  margin-top: 1rem;
-}
-
-form {
-  background: white;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-label {
-  display: block;
-  margin-top: 0.8rem;
-  font-weight: bold;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.3rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
 }
 
 button {
-  margin-top: 1rem;
-  padding: 0.7rem;
-  width: 100%;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  background: #4CAF50;
+  border-radius: 20px;
+  background: #00c853;
   color: white;
-  font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-button:hover {
-  background: #45a049;
-  transform: scale(1.03);
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  margin: 10px 0;
+}
+
+.main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
 }
 
 .card {
-  background: white;
-  padding: 1rem;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.progress {
+  background: #ccc;
+  height: 15px;
   border-radius: 10px;
-  margin-top: 1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-.badge {
-  display: inline-block;
-  background: gold;
-  padding: 0.5rem 1rem;
-  margin: 0.3rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.login-card {
-  max-width: 400px;
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.password-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.password-wrapper input {
-  flex: 1;
-}
-
-.password-wrapper button {
-  width: auto;
-  margin-left: 5px;
-  padding: 0.5rem;
-}
-
-.helper-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
-
-.helper-text a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-.helper-text a:hover {
-  text-decoration: underline;
-}
-
-.error {
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
-.success {
-  color: green;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #4CAF50;
-  box-shadow: 0 0 5px rgba(76,175,80,0.5);
-}
-
-form:hover {
-  transform: translateY(-2px);
-  transition: transform 0.2s ease;
+.fill {
+  background: #00c853;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
-  .main-nav {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .main-nav a {
-    flex: 1;
-  }
-
-  .container {
-    padding: 2rem;
-  }
-
-  form {
-    max-width: 500px;
-    margin: auto;
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    font-size: 1.1rem;
+@media (max-width: 600px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
   }
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  section {
-    grid-column: span 2;
-  }
-
-  form {
-    grid-column: span 1;
-  }
-
-  .card {
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-    transform: scale(1.03);
+  .main {
+    margin-left: 0;
   }
 }

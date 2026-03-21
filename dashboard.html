@@ -1,36 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Dashboard</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+<body>
 
-<body id="dashboard-page">
+<div class="sidebar">
+  <h2>LifeQuest</h2>
+  <a href="dashboard.html">Overview</a>
+  <a href="finance.html">Finance</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="focus.html">Focus</a>
+  <a href="rewards.html">Rewards</a>
+</div>
 
-<header class="main-header">
-<h1>Dashboard</h1>
-</header>
+<div class="main">
 
-<nav class="main-nav">
-<a href="money.html">Money</a>
-<a href="habits.html">Habits</a>
-<a href="productivity.html">Productivity</a>
-<a href="achievements.html">Achievements</a>
-<a href="account.html">Account</a>
-</nav>
+<h1>Overview</h1>
 
-<section class="container">
-<h2>Your Progress</h2>
+<div class="grid">
 
-<form id="level-form">
-<label for="level">Current Level:</label>
-<input type="number" id="level" name="level">
-</form>
+<div class="card">
+  <h2>Level</h2>
+  <p>Level 2</p>
+</div>
 
-<p class="info-text">Recent achievements will appear here.</p>
+<div class="card">
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="fill" style="width:60%"></div>
+  </div>
+</div>
 
-</section>
+<div class="card">
+  <h2>Quick Actions</h2>
+  <button onclick="location.href='finance.html'">Update Budget</button>
+  <button onclick="location.href='wellness.html'">Log Habits</button>
+</div>
+
+</div>
+
+</div>
 
 </body>
-</html>

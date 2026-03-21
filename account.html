@@ -1,40 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Account</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+<form id="signup-form">
 
-<body id="account-page">
+<label for="signup-email">Email</label>
+<input type="email" id="signup-email" required>
 
-<header class="main-header">
-<h1>Account</h1>
-</header>
+<label for="signup-password">Password</label>
+<input type="password" id="signup-password" required>
 
-<nav class="main-nav">
-<a href="dashboard.html">Dashboard</a>
-</nav>
+<p id="signup-message"></p>
 
-<section class="container">
-
-<form id="account-form">
-
-<label for="name">Name:</label>
-<input type="text" id="name" name="name">
-
-<label for="avatar">Choose Avatar:</label>
-<select id="avatar" name="avatar">
-<option value="default">Default</option>
-<option value="warrior">Warrior</option>
-<option value="scholar">Scholar</option>
-</select>
-
-<button type="submit">Save</button>
+<button type="submit">Create Account</button>
 
 </form>
 
-</section>
+<script>
+const signupForm = document.getElementById("signup-form");
+const message = document.getElementById("signup-message");
 
-</body>
-</html>
+signupForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("signup-email").value;
+  const password = document.getElementById("signup-password").value;
+
+  if (password.length < 6) {
+    message.textContent = "Password must be at least 6 characters.";
+    message.style.color = "red";
+    return;
+  }
+
+  localStorage.setItem("userEmail", email);
+  localStorage.setItem("userPassword", password);
+
+  message.textContent = "Account created successfully!";
+  message.style.color = "green";
+});
+</script>

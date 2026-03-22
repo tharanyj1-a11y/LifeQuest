@@ -1,23 +1,76 @@
-body {
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #1f4037, #99f2c8);
-  color: #fff;
+  color: white;
 }
 
-.landing {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar {
+  width: 220px;
   height: 100vh;
+  position: fixed;
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
 }
 
-.hero {
-  text-align: center;
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.main {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
 }
 
 button {
-  padding: 10px 20px;
+  margin-top: 15px;
+  padding: 10px;
   border: none;
   border-radius: 20px;
   background: #00c853;
@@ -25,54 +78,11 @@ button {
   cursor: pointer;
 }
 
-.sidebar {
-  width: 200px;
-  height: 100vh;
-  position: fixed;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
+button:hover {
+  background: #00b34a;
 }
 
-.sidebar a {
-  display: block;
-  color: white;
-  margin: 10px 0;
-}
-
-.main {
-  margin-left: 220px;
-  padding: 20px;
-}
-
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
-}
-
-.progress {
-  background: #ccc;
-  height: 15px;
-  border-radius: 10px;
-}
-
-.fill {
-  background: #00c853;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .sidebar {
     position: relative;
     width: 100%;
@@ -82,18 +92,4 @@ button {
   .main {
     margin-left: 0;
   }
-}
-
-.contact-card {
-  max-width: 500px;
-  margin: auto;
-}
-
-textarea {
-  width: 100%;
-  padding: 0.6rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  resize: none;
 }

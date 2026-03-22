@@ -1,22 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wellness</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
 
+<div class="sidebar">
+  <h2>LifeQuest</h2>
+  <a href="dashboard.html">Overview</a>
+  <a href="finance.html">Finance</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="focus.html">Focus</a>
+  <a href="rewards.html">Rewards</a>
+  <a href="contact.html">Contact</a>
+</div>
+
 <div class="main">
+  <h1>Wellness</h1>
 
-<h1>Wellness Tracker</h1>
+  <div class="card">
+    <form>
+      <label for="water">Water Intake</label>
+      <input type="number" id="water">
 
-<form>
-<label for="water">Water Intake</label>
-<input type="number" id="water">
+      <label for="sleep">Sleep Hours</label>
+      <input type="number" id="sleep">
 
-<label for="sleep">Sleep Hours</label>
-<input type="number" id="sleep">
-
-<button type="submit">Log</button>
-
-<p>😊 You're doing great!</p>
-
-</form>
+      <button type="submit">Log</button>
+    </form>
+  </div>
 
 </div>
 
 </body>
+</html>

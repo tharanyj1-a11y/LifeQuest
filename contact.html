@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - LifeQuest</title>
+<title>Contact</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,38 +14,29 @@
   <a href="finance.html">Finance</a>
   <a href="wellness.html">Wellness</a>
   <a href="focus.html">Focus</a>
-  <a href="rewards.html">Rewards</a>
+  <a href="rewards.html">Achievements</a>
   <a href="contact.html">Contact</a>
 </div>
 
 <div class="main">
+  <h1>Contact</h1>
 
-<h1>Contact & Feedback</h1>
+  <div class="card">
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name">
 
-<div class="card contact-card">
+      <label for="email">Email</label>
+      <input type="email" id="email">
 
-<form id="contact-form">
+      <label for="message">Message</label>
+      <textarea id="message"></textarea>
 
-<label for="name">Full Name</label>
-<input type="text" id="name" required>
-
-<label for="email">Email Address</label>
-<input type="email" id="email" required>
-
-<label for="message">Your Feedback</label>
-<textarea id="message" rows="5" required></textarea>
-
-<p id="form-message"></p>
-
-<button type="submit">Send Feedback</button>
-
-</form>
+      <button type="submit">Send</button>
+    </form>
+  </div>
 
 </div>
-
-</div>
-
-<script src="js/contact.js"></script>
 
 </body>
 </html>

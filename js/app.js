@@ -1,27 +1,9 @@
-// JOURNAL
-const journalForm = document.getElementById("journal-form");
-const journalList = document.getElementById("journal-list");
-
-if (journalForm) {
-  journalForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const date = document.getElementById("entry-date").value;
-    const text = document.getElementById("journal-entry").value;
-
-    const li = document.createElement("li");
-    li.textContent = date + " - " + text;
-
-    journalList.appendChild(li);
-    journalForm.reset();
-  });
-}
-
-// TASK REMOVE
+// TASK SYSTEM (FOCUS)
+const taskForm = document.getElementById("task-form");
 const taskList = document.getElementById("task-list");
 
-if (taskList) {
-  document.getElementById("task-form").addEventListener("submit", function(e) {
+if (taskForm && taskList) {
+  taskForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
     const taskInput = document.getElementById("task");
@@ -30,11 +12,9 @@ if (taskList) {
     li.textContent = taskInput.value;
 
     const btn = document.createElement("button");
-    btn.textContent = "Remove";
+    btn.textContent = " Remove";
 
-    btn.addEventListener("click", () => {
-      li.remove();
-    });
+    btn.onclick = () => li.remove();
 
     li.appendChild(btn);
     taskList.appendChild(li);
@@ -43,11 +23,11 @@ if (taskList) {
   });
 }
 
-// WELLNESS
+// WELLNESS TRACKER
 const wellnessForm = document.getElementById("wellness-form");
 const wellnessList = document.getElementById("wellness-list");
 
-if (wellnessForm) {
+if (wellnessForm && wellnessList) {
   wellnessForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -55,18 +35,19 @@ if (wellnessForm) {
     const sleep = document.getElementById("sleep").value;
 
     const li = document.createElement("li");
-    li.textContent = "Water: " + water + " | Sleep: " + sleep;
+    li.textContent = `Water: ${water} | Sleep: ${sleep}`;
 
     wellnessList.appendChild(li);
+
     wellnessForm.reset();
   });
 }
 
-// FINANCE
+// FINANCE TRACKER
 const financeForm = document.getElementById("finance-form");
 const financeList = document.getElementById("finance-list");
 
-if (financeForm) {
+if (financeForm && financeList) {
   financeForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -79,6 +60,7 @@ if (financeForm) {
     li.textContent = `${month} | Income: $${income} | ${desc}: $${amount}`;
 
     financeList.appendChild(li);
+
     financeForm.reset();
   });
 }

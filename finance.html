@@ -5,7 +5,6 @@
 <title>Finance</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <div class="sidebar">
@@ -14,7 +13,7 @@
   <a href="finance.html">Finance</a>
   <a href="wellness.html">Wellness</a>
   <a href="focus.html">Focus</a>
-  <a href="achievements.html">Achievements</a>
+  <a href="rewards.html">Rewards</a>
   <a href="journal.html">Journal</a>
   <a href="contact.html">Contact</a>
   <a href="account.html">Account</a>
@@ -22,29 +21,20 @@
 
 <div class="main">
   <h1>Finance</h1>
-  <p>
-The Finance Manager allows users to take control of their money by tracking income, monitoring expenses, and planning budgets. It provides a clear overview of financial habits and helps users make smarter financial decisions.
-</p>
-
-<ul>
-  <li>Track income and categorize expenses</li>
-  <li>Plan and manage monthly budgets</li>
-  <li>Understand spending patterns and improve financial stability</li>
-</ul>
 
   <div class="card">
     <form>
       <label for="income">Income</label>
-      <input type="number" id="income">
+      <input type="number" id="income" required>
 
       <label for="expense">Expenses</label>
-      <input type="number" id="expense">
+      <input type="number" id="expense" required>
 
       <button type="submit">Submit</button>
     </form>
   </div>
-
 </div>
 
+<script src="js/app.js"></script>
 </body>
 </html>

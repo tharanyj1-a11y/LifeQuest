@@ -5,7 +5,6 @@
 <title>Wellness</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <div class="sidebar">
@@ -14,7 +13,7 @@
   <a href="finance.html">Finance</a>
   <a href="wellness.html">Wellness</a>
   <a href="focus.html">Focus</a>
-  <a href="achievements.html">Achievements</a>
+  <a href="rewards.html">Rewards</a>
   <a href="journal.html">Journal</a>
   <a href="contact.html">Contact</a>
   <a href="account.html">Account</a>
@@ -22,29 +21,20 @@
 
 <div class="main">
   <h1>Wellness</h1>
-  <p>
-The Wellness Tracker helps users build and maintain healthy daily habits by allowing them to log important activities such as meals, water intake, sleep, and exercise. By consistently tracking these habits, users can develop a better understanding of their lifestyle and improve their overall well-being.
-</p>
-
-<ul>
-  <li>Track daily habits including meals, hydration, sleep, and physical activity</li>
-  <li>Encourages consistency and healthy routines</li>
-  <li>Provides a simple way to monitor wellness progress over time</li>
-</ul>
 
   <div class="card">
     <form>
       <label for="water">Water Intake</label>
-      <input type="number" id="water">
+      <input type="number" id="water" required>
 
       <label for="sleep">Sleep Hours</label>
-      <input type="number" id="sleep">
+      <input type="number" id="sleep" required>
 
       <button type="submit">Log</button>
     </form>
   </div>
-
 </div>
 
+<script src="js/app.js"></script>
 </body>
 </html>

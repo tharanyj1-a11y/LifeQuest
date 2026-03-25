@@ -29,21 +29,19 @@
 A personal, consistent record of thoughts, experiences, emotions, or daily events kept on a daily basis to improve mental clarity, self-awareness, and emotional well-being.
 </p>
 
-<ul>
-  <li>Private and flexible space for reflection or goal setting</li>
-</ul>
-
 <div class="card">
 <h2>Write Your Entry</h2>
 
 <form id="journal-form">
+
 <label for="entry-date">Date</label>
 <input type="date" id="entry-date" required>
 
 <label for="journal-entry">Your Thoughts</label>
-<textarea id="journal-entry" required></textarea>
+<textarea id="journal-entry" rows="6" placeholder="Write about your day..." required></textarea>
 
 <button type="submit">Save Entry</button>
+
 </form>
 
 </div>
@@ -55,6 +53,46 @@ A personal, consistent record of thoughts, experiences, emotions, or daily event
 
 </div>
 
+<script>
+// LOAD SAVED ENTRIES
+const journalList = document.getElementById("journal-list");
+
+function loadEntries() {
+  const entries = JSON.parse(localStorage.getItem("journalEntries")) || [];
+
+  journalList.innerHTML = "";
+
+  entries.forEach(entry => {
+    const li = document.createElement("li");
+    li.textContent = entry.date + " - " + entry.text;
+    journalList.appendChild(li);
+  });
+}
+
+// SAVE ENTRY
+const journalForm = document.getElementById("journal-form");
+
+journalForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const date = document.getElementById("entry-date").value;
+  const text = document.getElementById("journal-entry").value;
+
+  const entries = JSON.parse(localStorage.getItem("journalEntries")) || [];
+
+  entries.push({ date, text });
+
+  localStorage.setItem("journalEntries", JSON.stringify(entries));
+
+  journalForm.reset();
+  loadEntries();
+});
+
+// INITIAL LOAD
+loadEntries();
+</script>
+
 <script src="js/app.js"></script>
+
 </body>
 </html>

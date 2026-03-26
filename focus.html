@@ -22,23 +22,61 @@
 </div>
 
 <div class="main">
-  <h1>Focus</h1>
+<h1>Focus</h1>
 
-<p>
-With our focus manager, users can organize and track their daily responsibilities by creating, prioritizing, and checking off tasks as they go. It provides reminders and progress tracking to keep users focused, productive, and on schedule throughout the day.
-</p>
-  
-  <div class="card">
-    <form id="task-form">
-      <label for="task">Task</label>
-      <input type="text" id="task" required>
+<div class="card">
+<form id="task-form">
+<label for="task">Task</label>
+<input type="text" id="task" required>
+<button type="submit">Add Task</button>
+</form>
 
-      <button type="submit">Add Task</button>
-    </form>
-
-    <ul id="task-list"></ul>
-  </div>
+<ul id="task-list"></ul>
 </div>
+
+</div>
+
+<script>
+const taskForm = document.getElementById("task-form");
+const taskList = document.getElementById("task-list");
+
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  taskList.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    li.textContent = task;
+
+    const btn = document.createElement("button");
+    btn.textContent = " Remove";
+
+    btn.onclick = () => {
+      tasks.splice(index, 1);
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+      loadTasks();
+    };
+
+    li.appendChild(btn);
+    taskList.appendChild(li);
+  });
+}
+
+taskForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const taskInput = document.getElementById("task");
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  tasks.push(taskInput.value);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  taskInput.value = "";
+  loadTasks();
+});
+
+loadTasks();
+</script>
 
 <script src="js/app.js"></script>
 </body>

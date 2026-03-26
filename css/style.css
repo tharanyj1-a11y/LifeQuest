@@ -126,19 +126,40 @@ a {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+
+  /* SIDEBAR BECOMES TOP NAV */
   .sidebar {
     position: relative;
     width: 100%;
     height: auto;
-    text-align: center;
+    padding: 15px;
   }
 
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* GRID NAV (CLEANER THAN INLINE WRAP) */
+  .sidebar a {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .sidebar h2 {
+    grid-column: span 2;
+  }
+
+  /* MAIN CONTENT */
   .main {
     margin-left: 0;
-  }
-
-  .sidebar a {
-    display: inline-block;
-    margin: 5px;
+    padding: 15px;
   }
 }

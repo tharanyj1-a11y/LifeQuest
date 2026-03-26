@@ -1,144 +1,114 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASE */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1f4037, #99f2c8);
-  color: white;
+  background-color: #0f172a;
+  color: #fff;
+}
+
+/* FLEX LAYOUT */
+.container {
+  display: flex;
   min-height: 100vh;
 }
 
 /* SIDEBAR */
 .sidebar {
   width: 220px;
-  height: 100vh;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.75);
+  background-color: #020617;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar h2 {
   margin-bottom: 20px;
+  color: #00ffcc;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .sidebar a {
-  display: block;
-  color: white;
   text-decoration: none;
-  margin: 10px 0;
-  padding: 8px;
-  border-radius: 6px;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
   transition: 0.3s;
 }
 
 .sidebar a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: #1e293b;
 }
 
 /* MAIN CONTENT */
 .main {
-  margin-left: 240px;
-  padding: 20px;
-}
-
-h1 {
-  margin-bottom: 15px;
-}
-
-h2 {
-  margin-bottom: 10px;
+  flex: 1;
+  padding: 30px;
 }
 
 /* CARDS */
 .card {
-  background: rgba(255, 255, 255, 0.12);
+  background-color: #1e293b;
   padding: 20px;
-  border-radius: 12px;
   margin-bottom: 20px;
-  backdrop-filter: blur(8px);
+  border-radius: 12px;
 }
 
 /* FORMS */
-form {
-  margin-top: 10px;
-}
-
-label {
-  display: block;
-  margin-top: 12px;
-  font-weight: bold;
-}
-
-input,
-textarea {
+input, textarea, button {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
+  margin-bottom: 12px;
   border-radius: 6px;
   border: none;
-  font-size: 1rem;
 }
 
-textarea {
-  resize: none;
-}
-
-/* BUTTONS */
 button {
-  margin-top: 15px;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  border-radius: 25px;
-  background: #00c853;
-  color: white;
-  font-size: 1rem;
+  background-color: #00ffcc;
+  color: black;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-button:hover {
-  background: #00b34a;
-  transform: scale(1.03);
-}
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ========================= */
 
-/* PROFILE / ACCOUNT */
-.profile-section {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  border: 3px solid white;
-}
-
-/* LINKS */
-a {
-  color: #e0ffe7;
-}
-
-/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    text-align: center;
+
+  .container {
+    flex-direction: column;
   }
 
-  .main {
-    margin-left: 0;
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .sidebar a {
-    display: inline-block;
-    margin: 5px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .main {
+    padding: 15px;
   }
 }

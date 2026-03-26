@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rewards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <div class="sidebar">
@@ -20,11 +22,80 @@
 </div>
 
 <div class="main">
-  <h1>Rewards</h1>
 
-  <div class="card">🏆 Beginner</div>
-  <div class="card">🔥 Consistency</div>
+<h1>Achievements</h1>
+
+<div class="card">
+<h2>Unlocked Achievements</h2>
+<ul id="achievement-list"></ul>
 </div>
+
+</div>
+
+<script>
+const achievementList = document.getElementById("achievement-list");
+
+// LOAD EXISTING ACHIEVEMENTS
+let achievements = JSON.parse(localStorage.getItem("achievements")) || [];
+
+// HELPER FUNCTION
+function unlockAchievement(name) {
+  if (!achievements.includes(name)) {
+    achievements.push(name);
+    localStorage.setItem("achievements", JSON.stringify(achievements));
+  }
+}
+
+// CHECK TASK ACHIEVEMENT (10 TASKS)
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+if (tasks.length >= 10) {
+  unlockAchievement("🏆 Task Master (Completed 10 Tasks)");
+}
+
+// CHECK WELLNESS ENTRIES (5 ENTRIES)
+const wellness = JSON.parse(localStorage.getItem("wellness")) || [];
+if (wellness.length >= 5) {
+  unlockAchievement("💪 Consistency King (5 Wellness Logs)");
+}
+
+// CHECK WATER + SLEEP
+wellness.forEach(entry => {
+  if (entry.sleep > 10) {
+    unlockAchievement("😴 Deep Sleeper (10+ Hours Sleep)");
+  }
+  if (entry.water > 2000) {
+    unlockAchievement("💧 Hydration Hero (2000ml+ Water)");
+  }
+});
+
+// CHECK PROFILE UPDATE
+const name = localStorage.getItem("username");
+const avatar = localStorage.getItem("avatar");
+
+if (name && avatar) {
+  unlockAchievement("👤 Identity Builder (Profile Updated)");
+}
+
+// DISPLAY ACHIEVEMENTS
+function displayAchievements() {
+  achievementList.innerHTML = "";
+
+  if (achievements.length === 0) {
+    const li = document.createElement("li");
+    li.textContent = "No achievements yet. Start using the app!";
+    achievementList.appendChild(li);
+    return;
+  }
+
+  achievements.forEach(a => {
+    const li = document.createElement("li");
+    li.textContent = a;
+    achievementList.appendChild(li);
+  });
+}
+
+displayAchievements();
+</script>
 
 <script src="js/app.js"></script>
 </body>

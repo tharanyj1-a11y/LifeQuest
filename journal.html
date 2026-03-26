@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Journal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal - LifeQuest</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -10,7 +11,6 @@
 
 <div class="sidebar">
   <h2>LifeQuest</h2>
-
   <a href="dashboard.html">Overview</a>
   <a href="finance.html">Finance</a>
   <a href="wellness.html">Wellness</a>
@@ -38,7 +38,7 @@ A personal, consistent record of thoughts, experiences, emotions, or daily event
 <input type="date" id="entry-date" required>
 
 <label for="journal-entry">Your Thoughts</label>
-<textarea id="journal-entry" rows="6" required></textarea>
+<textarea id="journal-entry" rows="6" placeholder="Write about your day..." required></textarea>
 
 <button type="submit">Save Entry</button>
 
@@ -52,10 +52,6 @@ A personal, consistent record of thoughts, experiences, emotions, or daily event
 </div>
 
 </div>
-
-<script src="js/app.js"></script>
-</body>
-</html>
 
 <script>
 // LOAD SAVED ENTRIES

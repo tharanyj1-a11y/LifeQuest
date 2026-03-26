@@ -2,42 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="sidebar">
-  <h2>LifeQuest</h2>
-  <a href="dashboard.html">Overview</a>
-  <a href="finance.html">Finance</a>
-  <a href="wellness.html">Wellness</a>
-  <a href="focus.html">Focus</a>
-  <a href="rewards.html">Rewards</a>
-  <a href="journal.html">Journal</a>
-  <a href="contact.html">Contact</a>
-  <a href="account.html">Account</a>
-</div>
+<div class="container">
 
-<div class="main">
+<aside class="sidebar">
+<h2>LifeQuest</h2>
+<nav>
+<a href="dashboard.html">Overview</a>
+<a href="finance.html">Finance</a>
+<a href="wellness.html">Wellness</a>
+<a href="focus.html">Focus</a>
+<a href="rewards.html">Rewards</a>
+<a href="journal.html">Journal</a>
+<a href="contact.html">Contact</a>
+<a href="account.html">Account</a>
+</nav>
+</aside>
+
+<main class="main">
 
 <h1 id="welcome-user">Welcome</h1>
 
 <div class="card">
-  <h2>Level</h2>
-  <p id="level-display">Level 1</p>
+<h2>Level</h2>
+<p>Level 1</p>
 </div>
 
-<div class="card">
-  <h2>Progress</h2>
-  <p>Use the app daily to level up!</p>
-</div>
+</main>
 
 </div>
 
 <script src="js/auth.js"></script>
-<script src="js/app.js"></script>
 </body>
 </html>

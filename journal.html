@@ -1,55 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Journal - LifeQuest</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-
 <body>
 
-<div class="sidebar">
-  <h2>LifeQuest</h2>
-  <a href="dashboard.html">Overview</a>
-  <a href="finance.html">Finance</a>
-  <a href="wellness.html">Wellness</a>
-  <a href="focus.html">Focus</a>
-  <a href="rewards.html">Rewards</a>
-  <a href="journal.html">Journal</a>
-  <a href="contact.html">Contact</a>
-  <a href="account.html">Account</a>
-</div>
+<div class="container">
 
-<div class="main">
+<aside class="sidebar">
+<h2>LifeQuest</h2>
+<nav>
+<a href="dashboard.html">Overview</a>
+<a href="finance.html">Finance</a>
+<a href="wellness.html">Wellness</a>
+<a href="focus.html">Focus</a>
+<a href="rewards.html">Rewards</a>
+<a href="journal.html">Journal</a>
+<a href="contact.html">Contact</a>
+<a href="account.html">Account</a>
+</nav>
+</aside>
 
-<h1>Daily Journal</h1>
+<main class="main">
 
-<p>
-A personal, consistent record of thoughts, experiences, emotions, or daily events kept on a daily basis to improve mental clarity, self-awareness, and emotional well-being.
-</p>
+<h1>Journal</h1>
 
 <div class="card">
-<h2>Write Your Entry</h2>
-
 <form id="journal-form">
-
-<label for="entry-date">Date</label>
 <input type="date" id="entry-date" required>
-
-<label for="journal-entry">Your Thoughts</label>
-<textarea id="journal-entry" rows="6" placeholder="Write about your day..." required></textarea>
-
-<button type="submit">Save Entry</button>
-
+<textarea id="journal-entry" required></textarea>
+<button type="submit">Save</button>
 </form>
-
 </div>
 
-<div class="card">
-<h2>Previous Entries</h2>
 <ul id="journal-list"></ul>
-</div>
+
+</main>
 
 </div>
 

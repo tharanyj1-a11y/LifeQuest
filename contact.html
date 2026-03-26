@@ -1,34 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
 
-<div class="container">
+<div class="sidebar">
+  <h2>LifeQuest</h2>
 
-<aside class="sidebar">
-<h2>LifeQuest</h2>
-<nav>
-<a href="dashboard.html">Overview</a>
-<a href="finance.html">Finance</a>
-<a href="wellness.html">Wellness</a>
-<a href="focus.html">Focus</a>
-<a href="rewards.html">Rewards</a>
-<a href="journal.html">Journal</a>
-<a href="contact.html">Contact</a>
-<a href="account.html">Account</a>
-</nav>
-</aside>
+  <a href="dashboard.html">Overview</a>
+  <a href="finance.html">Finance</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="focus.html">Focus</a>
+  <a href="rewards.html">Rewards</a>
+  <a href="journal.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="account.html">Account</a>
+</div>
 
-<main class="main">
+<div class="main">
 
-<h1>Contact</h1>
+<h1>Contact Us</h1>
+
+<p>
+Have feedback or questions? Send us a message below.
+</p>
 
 <div class="card">
+
 <form action="mailto:tharany2@my.yorku.ca" method="POST" enctype="text/plain">
-<input type="text" name="name" required>
-<input type="email" name="email" required>
-<textarea name="message" required></textarea>
-<button type="submit">Send</button>
+
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5" required></textarea>
+
+<button type="submit">Send Message</button>
+
 </form>
-</div>
-
-</main>
 
 </div>
+
+</div>
+
+</body>
+</html>

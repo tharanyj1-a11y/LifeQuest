@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Achievements</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -35,10 +34,8 @@
 <script>
 const achievementList = document.getElementById("achievement-list");
 
-// LOAD EXISTING ACHIEVEMENTS
 let achievements = JSON.parse(localStorage.getItem("achievements")) || [];
 
-// HELPER FUNCTION
 function unlockAchievement(name) {
   if (!achievements.includes(name)) {
     achievements.push(name);
@@ -46,19 +43,19 @@ function unlockAchievement(name) {
   }
 }
 
-// CHECK TASK ACHIEVEMENT (10 TASKS)
-const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-if (tasks.length >= 10) {
+// ✅ TASK COMPLETION (FIXED)
+const completedTasks = parseInt(localStorage.getItem("completedTasks")) || 0;
+if (completedTasks >= 10) {
   unlockAchievement("🏆 Task Master (Completed 10 Tasks)");
 }
 
-// CHECK WELLNESS ENTRIES (5 ENTRIES)
+// ✅ WELLNESS ENTRIES
 const wellness = JSON.parse(localStorage.getItem("wellness")) || [];
 if (wellness.length >= 5) {
   unlockAchievement("💪 Consistency King (5 Wellness Logs)");
 }
 
-// CHECK WATER + SLEEP
+// ✅ WATER + SLEEP
 wellness.forEach(entry => {
   if (entry.sleep > 10) {
     unlockAchievement("😴 Deep Sleeper (10+ Hours Sleep)");
@@ -68,15 +65,20 @@ wellness.forEach(entry => {
   }
 });
 
-// CHECK PROFILE UPDATE
+// ✅ PROFILE UPDATE
 const name = localStorage.getItem("username");
 const avatar = localStorage.getItem("avatar");
-
 if (name && avatar) {
   unlockAchievement("👤 Identity Builder (Profile Updated)");
 }
 
-// DISPLAY ACHIEVEMENTS
+// ✅ JOURNAL ENTRIES (NEW)
+const journal = JSON.parse(localStorage.getItem("journalEntries")) || [];
+if (journal.length >= 10) {
+  unlockAchievement("📖 Reflective Mind (10 Journal Entries)");
+}
+
+// DISPLAY
 function displayAchievements() {
   achievementList.innerHTML = "";
 

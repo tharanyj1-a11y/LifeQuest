@@ -1,27 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Finance</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
 
-<div class="container">
+<div class="sidebar">
+  <h2>LifeQuest</h2>
+  <a href="dashboard.html">Overview</a>
+  <a href="finance.html">Finance</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="focus.html">Focus</a>
+  <a href="rewards.html">Rewards</a>
+  <a href="journal.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="account.html">Account</a>
+</div>
 
-<aside class="sidebar">
-<h2>LifeQuest</h2>
-<nav>
-<a href="dashboard.html">Overview</a>
-<a href="finance.html">Finance</a>
-<a href="wellness.html">Wellness</a>
-<a href="focus.html">Focus</a>
-<a href="rewards.html">Rewards</a>
-<a href="journal.html">Journal</a>
-<a href="contact.html">Contact</a>
-<a href="account.html">Account</a>
-</nav>
-</aside>
-
-<main class="main">
+<div class="main">
 
 <h1>Finance Manager</h1>
 
+<p>
+Track your income and expenses over time. Entries are saved and displayed from oldest to newest.
+</p>
+
 <div class="card">
 <form id="finance-form">
+
 <label for="month">Month</label>
 <input type="text" id="month" required>
 
@@ -35,14 +44,14 @@
 <input type="number" id="amount" required>
 
 <button type="submit">Add Record</button>
+
 </form>
 </div>
 
 <div class="card">
+<h2>Financial Records</h2>
 <ul id="finance-list"></ul>
 </div>
-
-</main>
 
 </div>
 

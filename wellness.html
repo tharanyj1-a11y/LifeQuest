@@ -1,27 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wellness</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
 
-<div class="container">
+<div class="sidebar">
+  <h2>LifeQuest</h2>
+  <a href="dashboard.html">Overview</a>
+  <a href="finance.html">Finance</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="focus.html">Focus</a>
+  <a href="rewards.html">Rewards</a>
+  <a href="journal.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="account.html">Account</a>
+</div>
 
-<aside class="sidebar">
-<h2>LifeQuest</h2>
-<nav>
-<a href="dashboard.html">Overview</a>
-<a href="finance.html">Finance</a>
-<a href="wellness.html">Wellness</a>
-<a href="focus.html">Focus</a>
-<a href="rewards.html">Rewards</a>
-<a href="journal.html">Journal</a>
-<a href="contact.html">Contact</a>
-<a href="account.html">Account</a>
-</nav>
-</aside>
-
-<main class="main">
-
+<div class="main">
 <h1>Wellness</h1>
 
 <div class="card">
 <form id="wellness-form">
+
 <label for="water">Water Intake</label>
 <input type="number" id="water" required>
 
@@ -29,6 +33,7 @@
 <input type="number" id="sleep" required>
 
 <button type="submit">Log</button>
+
 </form>
 </div>
 
@@ -36,8 +41,6 @@
 <h2>Previous Entries</h2>
 <ul id="wellness-list"></ul>
 </div>
-
-</main>
 
 </div>
 

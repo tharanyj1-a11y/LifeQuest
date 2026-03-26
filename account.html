@@ -1,34 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
 
-<div class="container">
-
-<aside class="sidebar">
-<h2>LifeQuest</h2>
-<nav>
-<a href="dashboard.html">Overview</a>
-<a href="finance.html">Finance</a>
-<a href="wellness.html">Wellness</a>
-<a href="focus.html">Focus</a>
-<a href="rewards.html">Rewards</a>
-<a href="journal.html">Journal</a>
-<a href="contact.html">Contact</a>
-<a href="account.html">Account</a>
-</nav>
-</aside>
-
-<main class="main">
-
-<h1>Account</h1>
-
-<div class="card">
-<form id="account-form">
-<input type="text" id="username">
-<input type="file" id="avatar">
-<button type="submit">Save</button>
-</form>
+<div class="sidebar">
+  <h2>LifeQuest</h2>
+  <a href="dashboard.html">Overview</a>
+  <a href="finance.html">Finance</a>
+  <a href="wellness.html">Wellness</a>
+  <a href="focus.html">Focus</a>
+  <a href="rewards.html">Rewards</a>
+  <a href="journal.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="account.html">Account</a>
 </div>
 
-</main>
+<div class="main">
+
+<h1>User Account</h1>
+
+<div class="card profile-section">
+  <img src="https://via.placeholder.com/120" class="avatar" id="avatar-img">
+  <p><strong>Name:</strong> <span id="display-name">Guest</span></p>
+</div>
+
+<div class="card">
+<h2>Update Profile</h2>
+
+<form id="account-form">
+
+<label for="username">Name</label>
+<input type="text" id="username">
+
+<label for="avatar">Upload Avatar</label>
+<input type="file" id="avatar" accept="image/*">
+
+<button type="submit">Save Changes</button>
+
+</form>
+</div>
 
 </div>
 
